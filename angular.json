@@ -102,5 +102,7 @@
       }
     }
   },
-  "defaultProject": "actuator-ui"
+  "cli": {
+    "analytics": false
+  }
 }
