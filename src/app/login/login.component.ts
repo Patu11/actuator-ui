@@ -16,7 +16,6 @@ export class LoginComponent implements OnInit {
 	}
 
 	onLogin() {
-		console.log("onLogin")
 		if (this.username && this.password) {
 			this.loginService.login(this.username, this.password).subscribe({
 				next: () => {
