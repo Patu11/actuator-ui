@@ -1,0 +1,6 @@
+<div *ngIf="singleLog" class="m-2">
+	<h5>{{singleLog.fileName}}</h5>
+	<pre class="overflow-auto">
+		<p *ngFor="let line of singleLog.content">{{line}}</p>
+	</pre>
+</div>

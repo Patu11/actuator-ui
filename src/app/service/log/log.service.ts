@@ -1,5 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {createOptionsWithAuthHeader} from "../../utils/request-utils";
+import {LogResponse} from "../../model/log-response";
 
 @Injectable({
 	providedIn: 'root'
@@ -11,6 +13,6 @@ export class LogService {
 	}
 
 	getLogs() {
-
+		return this.http.get<Array<LogResponse>>(this.LOG_URL, createOptionsWithAuthHeader());
 	}
 }
