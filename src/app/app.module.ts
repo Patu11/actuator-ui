@@ -9,6 +9,9 @@ import {LoginComponent} from './login/login.component';
 import {FormsModule} from "@angular/forms";
 import {LogComponent} from './log/log.component';
 import {LogTableComponent} from './log/log-table/log-table.component';
+import {BaseComponent} from './base/base.component';
+import {BsDropdownModule} from "ngx-bootstrap/dropdown";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
 	declarations: [
@@ -16,13 +19,16 @@ import {LogTableComponent} from './log/log-table/log-table.component';
 		HomeComponent,
 		LoginComponent,
 		LogComponent,
-		LogTableComponent
+		LogTableComponent,
+		BaseComponent
 	],
 	imports: [
 		BrowserModule,
+		BrowserAnimationsModule,
 		AppRoutingModule,
 		HttpClientModule,
-		FormsModule
+		FormsModule,
+		BsDropdownModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

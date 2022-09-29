@@ -11,8 +11,13 @@ import {Router} from "@angular/router";
 export class LogComponent implements OnInit {
 
 	logResponse?: Array<LogResponse>;
+	clickedLogResponse?: LogResponse;
 
 	constructor(private logService: LogService, private router: Router) {
+	}
+
+	onLogFileClick(logResponse: LogResponse) {
+		this.clickedLogResponse = logResponse;
 	}
 
 	ngOnInit(): void {
