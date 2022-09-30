@@ -19,10 +19,10 @@ export class LoginComponent implements OnInit {
 		if (this.username && this.password) {
 			this.loginService.login(this.username, this.password).subscribe({
 				next: () => {
-					localStorage.setItem("USERNAME", this.username!);
-					localStorage.setItem("PASSWORD", this.password!);
+					sessionStorage.setItem("USERNAME", this.username!);
+					sessionStorage.setItem("PASSWORD", this.password!);
 					this.errorMessageVisible = false;
-					this.router.navigate(['logs']);
+					this.router.navigate(['']);
 				},
 				error: () => {
 					this.errorMessageVisible = true;

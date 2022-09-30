@@ -1,0 +1,21 @@
+<div>
+	<div class="card float-start" style="width: 20rem;%; background-color: #1a1a1a">
+		<img class="card-img-top" [src]="series.photoUrl" alt="Card image cap">
+		<div class="card-body text-light">
+			<h5 class="card-title">
+				{{series.title}}
+				<span class="float-end">
+					<i class="bi-star-fill" style="color: #f6ca2a;"></i>
+					{{series.rating}}
+					</span>
+			</h5>
+			<p class="card-text">{{series.description}}</p>
+			<button (click)="toggleShowSeasons()" class="btn btn-warning">Show seasons</button>
+		</div>
+	</div>
+	<div *ngIf="showSeasons" class="float-start" style="width: 25rem;">
+		<div *ngFor="let season of series.seasons">
+			<app-season-card [season]="season"></app-season-card>
+		</div>
+	</div>
+</div>

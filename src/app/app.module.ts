@@ -9,9 +9,14 @@ import {LoginComponent} from './login/login.component';
 import {FormsModule} from "@angular/forms";
 import {LogComponent} from './log/log.component';
 import {LogTableComponent} from './log/log-table/log-table.component';
-import {BaseComponent} from './base/base.component';
 import {BsDropdownModule} from "ngx-bootstrap/dropdown";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {SeriesComponent} from './series/series.component';
+import {SeriesCardComponent} from './series/series-card/series-card.component';
+import {SeasonCardComponent} from './series/season-card/season-card.component';
+import {EpisodeCardComponent} from './series/episode-card/episode-card.component';
+import {AccordionModule} from "ngx-bootstrap/accordion";
+import {CollapseModule} from "ngx-bootstrap/collapse";
 
 @NgModule({
 	declarations: [
@@ -20,7 +25,10 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 		LoginComponent,
 		LogComponent,
 		LogTableComponent,
-		BaseComponent
+		SeriesComponent,
+		SeriesCardComponent,
+		SeasonCardComponent,
+		EpisodeCardComponent
 	],
 	imports: [
 		BrowserModule,
@@ -28,7 +36,9 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 		AppRoutingModule,
 		HttpClientModule,
 		FormsModule,
-		BsDropdownModule
+		BsDropdownModule,
+		AccordionModule,
+		CollapseModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
