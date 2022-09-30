@@ -1,0 +1,15 @@
+<div class="card ms-2 mb-2" style="background-color: #1a1a1a">
+	<div class="card-body text-light">
+		<button type="button" class="btn btn-warning" (click)="episodesCollapsed = !episodesCollapsed"
+				[attr.aria-expanded]="!episodesCollapsed" aria-controls="collapseEpisodes">Season {{season.number}}
+		</button>
+		<span class="float-end">Number of episodes: {{season.episodes.length}}</span>
+		<div id="collapseEpisodes" [collapse]="episodesCollapsed" [isAnimated]="true">
+			<div class="well well-lg card card-block card-header">
+				<app-episode-card *ngFor="let episode of season.episodes; let i = index"
+								  [episodeIndex]="i+1"
+								  [episode]="episode"></app-episode-card>
+			</div>
+		</div>
+	</div>
+</div>

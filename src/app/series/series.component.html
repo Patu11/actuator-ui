@@ -1,0 +1,21 @@
+<div class="m-2">
+	<h3>Enter series url from imdb/filmweb</h3>
+	<div class="input-group mb-3" style="width: 20rem;">
+		<input [(ngModel)]="seriesUrl" type="text" class="form-control" placeholder="Enter series url">
+		<div class="input-group-append">
+			<button style="width: 3.5rem;" (click)="onSearch()" class="btn btn-primary" type="button"
+					[disabled]="isSearching">
+				<span *ngIf="isSearching" class="spinner-border spinner-border-sm" role="status"
+					  aria-hidden="true"></span>
+				<span *ngIf="!isSearching">Go!</span>
+			</button>
+		</div>
+	</div>
+
+	<p *ngIf="searchingError" class="text-danger">Wrong url!</p>
+
+	<div>
+		<app-series-card *ngIf="seriesResponse" [series]="seriesResponse"></app-series-card>
+	</div>
+</div>
+

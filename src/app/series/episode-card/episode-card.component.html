@@ -1,0 +1,20 @@
+<div class="text-light">
+	<a type="button" class="link-light" (click)="infoCollapsed = !infoCollapsed"
+	   [attr.aria-expanded]="!infoCollapsed" aria-controls="collapseInfo">{{episodeIndex}}. {{episode.title}}
+	</a>
+	<div id="collapseInfo" [collapse]="infoCollapsed" [isAnimated]="true">
+		<div class="well well-lg card card-block card-header">
+			<span style="font-size: 1rem;">{{episode.description}}</span>
+			<br>
+			<div>
+				<div *ngIf="episode.premiereDate" class="float-start">
+					<span>Premiere: {{episode.premiereDate}}</span>
+				</div>
+				<div *ngIf="episode.rating!=-1" class="float-end">
+					<span><i class="bi-star-fill" style="color: #f6ca2a;"></i>
+						{{episode.rating}}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
