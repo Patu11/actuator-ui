@@ -17,6 +17,7 @@ import {SeasonCardComponent} from './series/season-card/season-card.component';
 import {EpisodeCardComponent} from './series/episode-card/episode-card.component';
 import {AccordionModule} from "ngx-bootstrap/accordion";
 import {CollapseModule} from "ngx-bootstrap/collapse";
+import { CustomDatePipe } from './pipe/custom-date.pipe';
 
 @NgModule({
 	declarations: [
@@ -28,7 +29,8 @@ import {CollapseModule} from "ngx-bootstrap/collapse";
 		SeriesComponent,
 		SeriesCardComponent,
 		SeasonCardComponent,
-		EpisodeCardComponent
+		EpisodeCardComponent,
+  CustomDatePipe
 	],
 	imports: [
 		BrowserModule,

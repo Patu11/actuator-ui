@@ -8,7 +8,7 @@
 			<br>
 			<div>
 				<div *ngIf="episode.premiereDate" class="float-start">
-					<span>Premiere: {{episode.premiereDate}}</span>
+					<span>Premiere: {{episode.premiereDate | customDate}}</span>
 				</div>
 				<div *ngIf="episode.rating!=-1" class="float-end">
 					<span><i class="bi-star-fill" style="color: #f6ca2a;"></i>
