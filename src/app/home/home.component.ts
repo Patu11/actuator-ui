@@ -7,7 +7,13 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+	docsUrl: string = $ENV.API_URL + '/docs';
+
 	constructor() {
+	}
+
+	openDocs() {
+		window.open(this.docsUrl, '_blank');
 	}
 
 	isLogged(): boolean {
