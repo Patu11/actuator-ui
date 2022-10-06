@@ -17,7 +17,13 @@ import {SeasonCardComponent} from './series/season-card/season-card.component';
 import {EpisodeCardComponent} from './series/episode-card/episode-card.component';
 import {AccordionModule} from "ngx-bootstrap/accordion";
 import {CollapseModule} from "ngx-bootstrap/collapse";
-import { CustomDatePipe } from './pipe/custom-date.pipe';
+import {CustomDatePipe} from './pipe/custom-date.pipe';
+import {ActuatorComponent} from './actuator/actuator.component';
+import {DiskMetricsComponent} from './actuator/disk-metrics/disk-metrics.component';
+import {HealthStatusComponent} from './actuator/health-status/health-status.component';
+import {ApiUptimeComponent} from './actuator/api-uptime/api-uptime.component';
+import { SystemCpuUsageComponent } from './actuator/system-cpu-usage/system-cpu-usage.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
 	declarations: [
@@ -30,7 +36,13 @@ import { CustomDatePipe } from './pipe/custom-date.pipe';
 		SeriesCardComponent,
 		SeasonCardComponent,
 		EpisodeCardComponent,
-  CustomDatePipe
+		CustomDatePipe,
+		ActuatorComponent,
+		DiskMetricsComponent,
+		HealthStatusComponent,
+		ApiUptimeComponent,
+  SystemCpuUsageComponent,
+  WelcomeComponent
 	],
 	imports: [
 		BrowserModule,
