@@ -1,25 +1,33 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-	<a class="navbar-brand ms-2" routerLink="">Filmweb API UI</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="navbarNav">
-		<ul class="navbar-nav">
-			<li class="nav-item">
-				<a class="nav-link" routerLink="login">Login</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" routerLink="series">Series</a>
-			</li>
-			<li class="nav-item">
-				<a (click)="openDocs()" class="nav-link" role="button">Docs</a>
-			</li>
-			<li *ngIf="isLogged()" class="nav-item">
-				<a class="nav-link" routerLink="logs">Logs</a>
-			</li>
-		</ul>
-	</div>
-</nav>
-<router-outlet></router-outlet>
+<div>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+		<a class="navbar-brand ms-2" routerLink="welcome">Filmweb API UI</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" routerLink="series">Series</a>
+				</li>
+				<li class="nav-item">
+					<a (click)="openDocs()" class="nav-link" role="button">Docs</a>
+				</li>
+				<li *ngIf="isLogged()" class="nav-item">
+					<a class="nav-link" routerLink="logs">Logs</a>
+				</li>
+				<li *ngIf="isLogged()" class="nav-item">
+					<a class="nav-link" routerLink="actuator">Actuator</a>
+				</li>
+				<li *ngIf="!isLogged()" class="nav-item">
+					<a class="nav-link text-warning" routerLink="login">Login</a>
+				</li>
+				<li *ngIf="isLogged()" class="nav-item">
+					<a (click)="logOut()" class="nav-link text-warning" routerLink="welcome">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<router-outlet></router-outlet>
+</div>
 

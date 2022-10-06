@@ -22,6 +22,13 @@ export class HomeComponent implements OnInit {
 		return !!username && !!password;
 	}
 
+	logOut() {
+		if (this.isLogged()) {
+			sessionStorage.removeItem("USERNAME");
+			sessionStorage.removeItem("PASSWORD");
+		}
+	}
+
 	ngOnInit(): void {
 	}
 }
